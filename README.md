@@ -68,3 +68,35 @@ curl -X DELETE http://localhost:3000/deleteBook/book-id
 Acknowledgments
 This application was built with Node.js and Express.js.
 Data is stored in a MongoDB database using Mongoose.
+
+Deployment Process
+
+Create a Render Account:
+
+If you haven't already, sign up for a Render account at https://render.com.
+
+Log in to Render:
+
+Log in to your Render account.
+
+Create a New Service:
+
+Click on "Services" in the Render dashboard.
+Click the "Create a Service" button.
+Select a Repository:
+
+Choose your Git repository where your Node.js application is hosted.
+
+Configure Your Build:
+
+Render will automatically detect the type of service (in this case, Node.js) and configure a build and runtime environment.
+
+Specify Build and Start Commands:
+
+In the "Build Command" field, specify the command to build your Node.js application. For example, you might use npm install (for this case)
+
+In the "Start Command" field, specify the command to start your Node.js application. I've used `npx nodemon app.js`
+
+Create the Service:
+
+Click the "Create Service" button. Render will start the deployment process. It will build and deploy your Node.js application according to the settings you've specified.
