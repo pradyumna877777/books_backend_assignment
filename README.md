@@ -26,6 +26,8 @@ env
 
 MONGODB_URI=mongodb://localhost/your-database-name
 
+Note : Node modules and env is pushed for you to test it with ease
+
 
 Start the application:
 
