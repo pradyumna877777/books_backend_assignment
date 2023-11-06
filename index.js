@@ -2,14 +2,17 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const router = require('./routes/book')
+require('dotenv').config()
 const app = express();
 
 app.use(bodyParser.json());
 app.use(express.json())
 app.use(router)
 
-const port = 3000;
 
+const env = process.env;
+const port = env.PORT
+const MONGO_URI = env.MONGO_URI
 
 
 app.listen(port, () => {
@@ -17,7 +20,7 @@ app.listen(port, () => {
   });
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://pradyumnareddyk18:backend@cluster0.eyyzmbn.mongodb.net/', {
+mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

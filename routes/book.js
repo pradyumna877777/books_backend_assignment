@@ -2,7 +2,7 @@ const express = require("express")
 
 const router = express.Router()
 
-const{addBook,findBook,findBookById,editBook,deleteBook} = require("../controllers/book")
+const{addBook,listBooks,findBookById,editBook,deleteBook} = require("../controllers/book")
 
 router.post("/addBook", addBook)
 router.get("/listBooks", listBooks)
